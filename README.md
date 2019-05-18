@@ -984,7 +984,7 @@ df
 ```python
 import plotly.plotly as py
 import plotly.graph_objs as go
-
+from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 import pandas as pd
 
 for col in df.columns:
@@ -1020,7 +1020,7 @@ layout = go.Layout(
 )
 
 fig = go.Figure(data = data, layout = layout)
-py.iplot(fig, filename = 'd3-cloropleth-map')
+plot(fig, filename = 'd3-cloropleth-map')
 ```
 
 
