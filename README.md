@@ -1,6 +1,6 @@
 ## STATE HOMELESSNESS DATA
-* iPynb file will download xlsx from hud, convert and clean to dataframe, output data to csv
-* takes the dataframe and generates an html plotly choropleth map for each year
+* iPynb file will download xlsx from HUD, convert and clean to dataframe, output data to csv
+* Takes the dataframe and generates an html plotly choropleth map for each year
 
 ```python
 import requests
