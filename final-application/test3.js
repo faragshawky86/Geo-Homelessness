@@ -2,18 +2,18 @@
 
 
 //create references to each div of interest 
-var nighttimeResidenceDoubledUp = d3.select("#nighttimeResidenceDoubledUp").append('h6')
-var nighttimeResidenceHotelsMotels = d3.select("#nighttimeResidenceHotelsMotels").append('h6')
-var nighttimeResidenceShelters = d3.select("#nighttimeResidenceShelters").append('h6')
-var nighttimeResidenceUnsheltered = d3.select("#nighttimeResidenceUnsheltered").append('h6')
-var personsExperiencingChronicHomelessness = d3.select("#personsExperiencingChronicHomelessness").append('h6')
-var totalFamilyHouseholdsExperiencingHomelessness = d3.select("#totalFamilyHouseholdsExperiencingHomelessness").append('h6')
-var totalHomelessPopulation = d3.select("#totalHomelessPopulation").append('h6')
-var totalNumberOfHomelessStudents = d3.select("#totalNumberOfHomelessStudents").append('h6')
-var totalNumberOfUnaccompaniedHomelessStudents = d3.select("#totalNumberOfUnaccompaniedHomelessStudents").append('h6')
-var UnaccompaniedYoungAdultsExperiencingHomelessness = d3.select("#UnaccompaniedYoungAdultsExperiencingHomelessness").append('h6')
-var VeteransExperiencingHomelessness = d3.select("#VeteransExperiencingHomelessness").append('h6')
-var PercentageOfNationalHomelessPopulation = d3.select("#PercentageOfNationalHomelessPopulation").append('h6')
+var nighttimeResidenceDoubledUp = d3.select("#nighttimeResidenceDoubledUp").append('h5')
+var nighttimeResidenceHotelsMotels = d3.select("#nighttimeResidenceHotelsMotels").append('h5')
+var nighttimeResidenceShelters = d3.select("#nighttimeResidenceShelters").append('h5')
+var nighttimeResidenceUnsheltered = d3.select("#nighttimeResidenceUnsheltered").append('h5')
+var personsExperiencingChronicHomelessness = d3.select("#personsExperiencingChronicHomelessness").append('h5')
+var totalFamilyHouseholdsExperiencingHomelessness = d3.select("#totalFamilyHouseholdsExperiencingHomelessness").append('h5')
+var totalHomelessPopulation = d3.select("#totalHomelessPopulation").append('h5')
+var totalNumberOfHomelessStudents = d3.select("#totalNumberOfHomelessStudents").append('h5')
+var totalNumberOfUnaccompaniedHomelessStudents = d3.select("#totalNumberOfUnaccompaniedHomelessStudents").append('h5')
+var UnaccompaniedYoungAdultsExperiencingHomelessness = d3.select("#UnaccompaniedYoungAdultsExperiencingHomelessness").append('h5')
+var VeteransExperiencingHomelessness = d3.select("#VeteransExperiencingHomelessness").append('h5')
+var PercentageOfNationalHomelessPopulation = d3.select("#PercentageOfNationalHomelessPopulation").append('h5')
 
 // select dropdown menu text
 var dropdown = d3.select('#States')
@@ -32,6 +32,10 @@ function onchange() {
         return item.state == selectValue
     };
 
+
+    titleSpan = d3.select("#titleState")
+    titleSpan.text(selectValue)
+    
     filteredstate = lateststats.filter(selectedState);
 
     nighttimeResidenceDoubledUp.text(filteredstate[0].nighttimeResidenceDoubledUp);
