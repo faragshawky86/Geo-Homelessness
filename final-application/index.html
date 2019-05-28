@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="style.css">
         <link rel="stylesheet" href="slideshow.css">
        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.13.0/d3.min.js"></script>
       
     </head>
     
@@ -47,61 +48,192 @@
     </div>
 
     <div class="container">
-      <!-- Example row of columns -->
-    
-
-      <div class="row">
-        <div class="slideshow-container">
-
-          <div class="mySlides fade">
-            <div class="numbertext">1 / 3</div>
-            <img src="images/img1.jpg" style="width:100%">
-            <div class="text">Caption Text</div>
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">2 / 3</div>
-            <img src="images/img2.jpg" style="width:100%">
-            <div class="text">Caption Two</div>
-          </div>
-          
-          <div class="mySlides fade">
-            <div class="numbertext">3 / 3</div>
-            <img src="images/img3.jpg" style="width:100%">
-            <div class="text">Caption Three</div>
-          </div>
-          
-          </div>
-          <br>
-          
-          <div style="text-align:center">
-            <span class="dot"></span> 
-            <span class="dot"></span> 
-            <span class="dot"></span> 
-          </div>
-          
-      </div>
-      <div class="row">
-
-          <div class="col-md-4">
-              <h2>Title 1</h2>
-              <p>Studying the corolation between ...... </p>
-              <p><a class="btn btn-default" href="latitude-vs-wind-speed.html" role="button">View graph &raquo;</a></p>
+        <!-- Example row of columns -->
+        <div class="row">
+          <div class="slideshow-container">
+  
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="images/img1.jpg" style="width:100%">
+              <div class="text">Caption Text</div>
             </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="images/img2.jpg" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+            
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="images/img3.jpg" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+            
+            </div>
+            <br>
+            
+            <div style="text-align:center">
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+              <span class="dot"></span> 
+            </div>
+            
+      </div>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-12">
+          <div id="test"></div>
+          <select id="States">
+              <option value="Alabama">Alabama</option>
+                  
+              <option value="Alaska">Alaska</option>
+              
+              <option value="Arizona">Arizona</option>
+              
+              <option value="Arkansas">Arkansas</option>
+              
+              <option value="California">California</option>
+              
+              <option value="Colorado">Colorado</option>
+              
+              <option value="Connecticut">Connecticut</option>
+              
+              <option value="Delaware">Delaware</option>
+              
+              <option value="District of Columbia">District of Columbia</option>
+              
+              <option value="Florida">Florida</option>
+              
+              <option value="Georgia">Georgia</option>
+              
+              <option value="Guam">Guam</option>
+              
+              <option value="Hawaii">Hawaii</option>
+              
+              <option value="Idaho">Idaho</option>
+              
+              <option value="Illinois">Illinois</option>
+              
+              <option value="Indiana">Indiana</option>
+              
+              <option value="Iowa">Iowa</option>
+              
+              <option value="Kansas">Kansas</option>
+              
+              <option value="Kentucky">Kentucky</option>
+              
+              <option value="Louisiana">Louisiana</option>
+              
+              <option value="Maine">Maine</option>
+              
+              <option value="Maryland">Maryland</option>
+              
+              <option value="Massachusetts">Massachusetts</option>
+              
+              <option value="Michigan">Michigan</option>
+              
+              <option value="Minnesota">Minnesota</option>
+              
+              <option value="Mississippi">Mississippi</option>
+              
+              <option value="Missouri">Missouri</option>
+              
+              <option value="Montana">Montana</option>
+              
+              <option value="Nebraska">Nebraska</option>
+              
+              <option value="Nevada">Nevada</option>
+              
+              <option value="New Hampshire">New Hampshire</option>
+              
+              <option value="New Jersey">New Jersey</option>
+              
+              <option value="New Mexico">New Mexico</option>
+              
+              <option value="New York">New York</option>
+              
+              <option value="North Carolina">North Carolina</option>
+              
+              <option value="North Dakota">North Dakota</option>
+              
+              <option value="Ohio">Ohio</option>
+              
+              <option value="Oklahoma">Oklahoma</option>
+              
+              <option value="Oregon">Oregon</option>
+              
+              <option value="Pennsylvania">Pennsylvania</option>
+              
+              <option value="Puerto Rico">Puerto Rico</option>
+              
+              <option value="Rhode Island">Rhode Island</option>
+              
+              <option value="South Carolina">South Carolina</option>
+              
+              <option value="South Dakota">South Dakota</option>
+              
+              <option value="Tennessee">Tennessee</option>
+              
+              <option value="Texas">Texas</option>
+              
+              <option value="Utah">Utah</option>
+              
+              <option value="Vermont">Vermont</option>
+              
+              <option value="Virgin Islands">Virgin Islands</option>
+              
+              <option value="Virginia">Virginia</option>
+              
+              <option value="Washington">Washington</option>
+              
+              <option value="West Virginia">West Virginia</option>
+              
+              <option value="Wisconsin">Wisconsin</option>
+              
+              <option value="Wyoming">Wyoming</option>
+          </select>
 
-            <div class="col-md-4">
-                <h2>Title 1</h2><br>
-                <p>Studying the corolation between ...... </p><br><br>
-                <p><a class="btn btn-default" href="comparison.html" role="button">View graph comparison &raquo;</a></p>
-              </div>
+          <h2> Latest Homeless Statistics (2018)</h2>
+          <hr>
+          <h5> Nighttime Residence: Doubled up</h5> 
+          <div id="nighttimeResidenceDoubledUp"></div><br>
 
-              <div class="col-md-4">
-                  <h2>Raw Data</h2>
-                  <p>Having doubts? Here is the raw data used for the graphs. </p>
-                  <p><a class="btn btn-default" href="raw-data.html" role="button">View raw data &raquo;</a></p>
-                </div>
+          <h5> Nighttime Residence: Hotels/motels</h5>
+          <div id="nighttimeResidenceHotelsMotels"></div><br>
 
-       </div>
+          <h5> Nighttime Residence: Shelters</h5> 
+          <div id="nighttimeResidenceShelters"></div><br>
+
+          <h5> Nighttime Residence: Unsheltered</h5> 
+          <div id="nighttimeResidenceUnsheltered"></div><br>
+
+          <h5> Persons Experiencing Chronic Homelessness</h5>
+          <div id="personsExperiencingChronicHomelessness"></div> <br>
+
+          <h5> Total Family Households Experiencing Homelessness</h5>
+          <div id="totalFamilyHouseholdsExperiencingHomelessness"></div><br>
+
+          <h5> Total Homeless Population</h5>
+          <div id="totalHomelessPopulation"></div><br>
+
+          <h5> Total Number of Homeless Students</h5>
+          <div id="totalNumberOfHomelessStudents"></div><br>
+
+          <h5> Total Number of Unaccompanied Homeless Students</h5>
+          <div id="totalNumberOfUnaccompaniedHomelessStudents"></div><br>
+
+          <h5> Unaccompanied Young Adults (Aged 18-24) Experiencing Homelessness</h5>
+          <div id="UnaccompaniedYoungAdultsExperiencingHomelessness"></div><br>
+
+          <h5> Veterans Experiencing Homelessness</h5>
+          <div id="VeteransExperiencingHomelessness"></div><br>
+
+          <h5> Percentage of National Homeless Population</h5>
+          <div id="PercentageOfNationalHomelessPopulation"></div><br>
+        </div>
+      </div>
 
 
       <hr>
@@ -113,5 +245,12 @@
 
 
     <script src="slideshow.js"></script>
+    <script src="test3.js"></script>
     </body>
 </html>
+
+
+
+
+
+

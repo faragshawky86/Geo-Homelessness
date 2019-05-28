@@ -165,7 +165,7 @@ function housePriceTrend2014() {
 };
 
 //################################################################
-//             2015
+//                              2015
 //################################################################
 
 
@@ -263,8 +263,33 @@ function housePriceTrend2017() {
 
 
 
+function Unemployment2017() {
+
+    var trace1 = {
+        x: unemployementRate2017,
+        y: homelessnessPercentages2017,
+        mode: 'markers',
+        type: 'scatter',
+        name: 'Team A',
+        text: states2,
+        marker: { size: 12 }
+      };
+    
+    
+      var data = [trace1];
+
+      var layout = {
+        title: "Unemployment Rates vs Percentage Homelessness (2017)",
+        xaxis: { title: "Unemployment Rates" },
+        yaxis: { title: "Percentage Homelessness" }
+      };
+    
+      Plotly.newPlot('myDiv', data, layout);
+};
+
+
+housePriceTrend2013()
 
 
 
-
-housePriceTrend2010()
+Unemployment2017()

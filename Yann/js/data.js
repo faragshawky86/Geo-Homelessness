@@ -50,25 +50,75 @@ d3.csv("../dataframes/Price_to_Homelessness.csv", function(error, percentageData
   });
   
 
-  console.log(states)
-  console.log(homelessnessPercentage2010)
-  console.log(homelessnessPercentage2011)
-  console.log(homelessnessPercentage2012)
-  console.log(homelessnessPercentage2013)
-  console.log(homelessnessPercentage2014)
-  console.log(homelessnessPercentage2015)
-  console.log(homelessnessPercentage2016)
-  console.log(homelessnessPercentage2017)
+//   console.log(states)
+//   console.log(homelessnessPercentage2010)
+//   console.log(homelessnessPercentage2011)
+//   console.log(homelessnessPercentage2012)
+//   console.log(homelessnessPercentage2013)
+//   console.log(homelessnessPercentage2014)
+//   console.log(homelessnessPercentage2015)
+//   console.log(homelessnessPercentage2016)
+//   console.log(homelessnessPercentage2017)
+
+// // #################################################################################################################################################################################################################################
+
+//   console.log(medianHousePrice2010)
+//   console.log(medianHousePrice2011)
+//   console.log(medianHousePrice2012)
+//   console.log(medianHousePrice2013)
+//   console.log(medianHousePrice2014)
+//   console.log(medianHousePrice2015)
+//   console.log(medianHousePrice2016)
+//   console.log(medianHousePrice2017)
 
 // #################################################################################################################################################################################################################################
 
-  console.log(medianHousePrice2010)
-  console.log(medianHousePrice2011)
-  console.log(medianHousePrice2012)
-  console.log(medianHousePrice2013)
-  console.log(medianHousePrice2014)
-  console.log(medianHousePrice2015)
-  console.log(medianHousePrice2016)
-  console.log(medianHousePrice2017)
+var states2 = []
+var homelessnessPercentages2010 = []
+var homelessnessPercentages2011 = []
+var homelessnessPercentages2012 = []
+var homelessnessPercentages2013 = []
+var homelessnessPercentages2014 = []
+var homelessnessPercentages2015 = []
+var homelessnessPercentages2016 = []
+var homelessnessPercentages2017 = []
 
-// #################################################################################################################################################################################################################################
+var unemployementRate2010 = []
+var unemployementRate2011 = []
+var unemployementRate2012 = []
+var unemployementRate2013 = []
+var unemployementRate2014 = []
+var unemployementRate2015 = []
+var unemployementRate2016 = []
+var unemployementRate2017 = []
+
+d3.csv("../dataframes/Unemployment_vs_Homelessness.csv", function(error, unemployData) {
+  if (error) return console.warn(error);
+
+  unemployData.forEach(row => {
+    states2.push(row.State)  
+    homelessnessPercentages2010.push(row.homelessnessPercentage2010)
+    homelessnessPercentages2011.push(row.homelessnessPercentage2011)
+    homelessnessPercentages2012.push(row.homelessnessPercentage2012)
+    homelessnessPercentages2013.push(row.homelessnessPercentage2013)
+    homelessnessPercentages2014.push(row.homelessnessPercentage2014)
+    homelessnessPercentages2015.push(row.homelessnessPercentage2015)
+    homelessnessPercentages2016.push(row.homelessnessPercentage2016)
+    homelessnessPercentages2017.push(row.homelessnessPercentage2017)
+
+
+    unemployementRate2010.push(row.unemployementRate2010)
+    unemployementRate2011.push(row.unemployementRate2011)
+    unemployementRate2012.push(row.unemployementRate2012)
+    unemployementRate2013.push(row.unemployementRate2013)
+    unemployementRate2014.push(row.unemployementRate2014)
+    unemployementRate2015.push(row.unemployementRate2015)
+    unemployementRate2016.push(row.unemployementRate2016) 
+    unemployementRate2017.push(row.unemployementRate2017) 
+  });
+});
+
+
+
+console.log(unemployementRate2017)
+console.log(homelessnessPercentages2017)
