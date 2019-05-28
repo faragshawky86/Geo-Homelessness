@@ -1,14 +1,147 @@
 <!DOCTYPE html>
-<html lang="en">
+<html class="no-js" lang="">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Basic Charts</title>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="slideshow.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    />
   </head>
+
   <body>
-    <div id="plot"></div>
-    <script src="choropleth.js"></script>
+    <div class="navbar">
+      <a href="index.html">Visualization Dashboard</a>
+      <ul>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Plots
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="plotly-homelessness-states.html"
+              >Homelessness for 50 states</a
+            >
+            <a href="plotly-unemployment-states.html"
+              >Unemployment for 50 states</a
+            >
+            <a href="scatterplot-houseprice-homelessness.html"
+              >House pricing vs scatterplot-houseprice-homelessness-data</a
+            >
+            <a href="vacant_houses_per_homeless.html"
+              >Vacant houses per homeless person per state</a
+            >
+            <a href="major_cities_homelessness.html"
+              >Major US cities homelessness bubble chart</a
+            >
+            <a href="index2.html">US Cities >500k Population</a>
+          </div>
+        </div>
+
+        <a href="http://127.0.0.1:5000/">Raw data</a>
+      </ul>
+    </div>
+
+    <div class="jumbotron">
+      <div class="container">
+        <h1>Project II | Research on Homelessness in the U.S.</h1>
+        <p>
+          Homelessness has been a major problem for many communities in the USA.
+          We are looking at Federal data for all 50 states and diggin into
+          possible factors that could be affecting the situation.
+        </p>
+      </div>
+    </div>
+
+    <div class="container">
+      <!-- Example row of columns -->
+
+      <div class="row">
+        <div class="slideshow-container">
+          <div class="mySlides fade">
+            <div class="numbertext">1 / 3</div>
+            <img src="images/img1.jpg" style="width:100%" />
+            <div class="text">Caption Text</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">2 / 3</div>
+            <img src="images/img2.jpg" style="width:100%" />
+            <div class="text">Caption Two</div>
+          </div>
+
+          <div class="mySlides fade">
+            <div class="numbertext">3 / 3</div>
+            <img src="images/img3.jpg" style="width:100%" />
+            <div class="text">Caption Three</div>
+          </div>
+        </div>
+        <br />
+
+        <div style="text-align:center">
+          <span class="dot"></span>
+          <span class="dot"></span>
+          <span class="dot"></span>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-4">
+          <h2>Homelessness vs. Housing Prices</h2>
+          <p>
+            Studying the relationship between homelessness and rental/home
+            prices
+          </p>
+          <p>
+            <a
+              class="btn btn-default"
+              href="latitude-vs-wind-speed.html"
+              role="button"
+              >View graph &raquo;</a
+            >
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <h2>Homelessness vs. Population</h2>
+          <br />
+          <p>
+            Studying the relationship between high homelessness population and
+            population overall.
+          </p>
+          <br /><br />
+          <p>
+            <a class="btn btn-default" href="comparison.html" role="button"
+              >View graph comparison &raquo;</a
+            >
+          </p>
+        </div>
+
+        <div class="col-md-4">
+          <h2>Raw Data</h2>
+          <p>Having doubts? Here is the raw data used for the graphs.</p>
+          <p>
+            <a class="btn btn-default" href="raw-data.html" role="button"
+              >View raw data &raquo;</a
+            >
+          </p>
+        </div>
+      </div>
+
+      <hr />
+
+      <footer>
+        <p>&copy; Ahmed, Desthy, Pablo & Yann 2019</p>
+      </footer>
+    </div>
+
+    <script src="slideshow.js"></script>
   </body>
 </html>
