@@ -35,7 +35,7 @@ function onchange() {
 
     titleSpan = d3.select("#titleState")
     titleSpan.text(selectValue)
-    
+
     filteredstate = lateststats.filter(selectedState);
 
     nighttimeResidenceDoubledUp.text(filteredstate[0].nighttimeResidenceDoubledUp);
@@ -60,7 +60,7 @@ function onchange() {
 
     VeteransExperiencingHomelessness.text(filteredstate[0].VeteransExperiencingHomelessness)
     
-    PercentageOfNationalHomelessPopulation.text(filteredstate[0].PercentageOfNationalHomelessPopulation)
+    PercentageOfNationalHomelessPopulation.text(Number(filteredstate[0].PercentageOfNationalHomelessPopulation).toFixed(2) + '%')
 
     console.log(dropdown.property('value'))
     });
